@@ -11,6 +11,7 @@ import CharCard from "./components/CharCard";
 function App() {
     const [count, setCount] = useState(0);
 
+    console.log("Public");
     return (
         <>
             <h1>React Project Begins Now</h1>
