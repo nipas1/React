@@ -16,8 +16,8 @@ const Navigation = () => {
                         <Nav.Link as={Link} to="/catalog">
                             Catalog
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/charCard">
-                            CharCard
+                        <Nav.Link as={Link} to="/login">
+                            Login
                         </Nav.Link>
                     </Nav>
                 </Container>

@@ -6,12 +6,10 @@ import { Routes, Route } from "react-router-dom";
 import Catalog from "./components/Catalog";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
-import CharCard from "./components/CharCard";
+import Login from "./components/Login";
 
 function App() {
     const [count, setCount] = useState(0);
-
-    console.log("Public");
     return (
         <>
             <h1>React Project Begins Now</h1>
@@ -20,7 +18,7 @@ function App() {
             <Routes>
                 <Route path="/home" element={<Home />}></Route>
                 <Route path="/catalog" element={<Catalog />}></Route>
-                <Route path="/charCard" element={<CharCard />}></Route>
+                <Route path="/login" element={<Login />}></Route>
             </Routes>
         </>
     );
