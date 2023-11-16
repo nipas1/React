@@ -7,6 +7,9 @@ import Catalog from "./components/Catalog";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import Login from "./components/Login";
+import SingleComputer from "./components/SingleComputer";
+import SingleUser from "./components/SingleUser";
+import Register from "./components/Register";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -19,6 +22,10 @@ function App() {
                 <Route path="/home" element={<Home />}></Route>
                 <Route path="/catalog" element={<Catalog />}></Route>
                 <Route path="/login" element={<Login />}></Route>
+                <Route path="/register" element={<Register />}></Route>
+                <Route path="/singleComputer" element={<SingleComputer />}></Route>
+                <Route path="/singleUser" element={<SingleUser />}></Route>
+
             </Routes>
         </>
     );

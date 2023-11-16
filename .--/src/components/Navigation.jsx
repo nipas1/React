@@ -19,6 +19,15 @@ const Navigation = () => {
                         <Nav.Link as={Link} to="/login">
                             Login
                         </Nav.Link>
+                        <Nav.Link as={Link} to="/register">
+                            Register
+                        </Nav.Link>
+                        <Nav.Link as={Link} to="/singleComputer">
+                            Computer
+                        </Nav.Link>
+                        <Nav.Link as={Link} to="/singleUser">
+                            User
+                        </Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
