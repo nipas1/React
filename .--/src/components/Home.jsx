@@ -1,5 +1,7 @@
 import Card from 'react-bootstrap/Card';
 
+import img from "../../../images/product-item2.jpg"
+
 const Home = () => {
     return (
         <>
@@ -19,7 +21,7 @@ const Home = () => {
               <div className="swiper-slide">
                 <div className="product-card position-relative">
                   <div className="image-holder">
-                    <Card.Img src="images/product-item1.jpg" alt="product-item" className="img-fluid"/>
+                    <Card.Img src={img} alt="product-item" className="img-fluid"/>
                   </div>
                   <div className="cart-concern position-absolute">
                     <div className="cart-button d-flex">

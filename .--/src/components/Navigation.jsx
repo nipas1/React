@@ -28,6 +28,9 @@ const Navigation = () => {
                         <Nav.Link as={Link} to="/singleUser">
                             User
                         </Nav.Link>
+                        <Nav.Link as={Link} to="/addComputer">
+                            Add Computer
+                        </Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

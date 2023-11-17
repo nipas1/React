@@ -10,6 +10,7 @@ import Login from "./components/Login";
 import SingleComputer from "./components/SingleComputer";
 import SingleUser from "./components/SingleUser";
 import Register from "./components/Register";
+import AddComputer from "./components/AddComputer";
 
 function App() {
     const [count, setCount] = useState(0);
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/register" element={<Register />}></Route>
                 <Route path="/singleComputer" element={<SingleComputer />}></Route>
                 <Route path="/singleUser" element={<SingleUser />}></Route>
+                <Route path="/addComputer" element={<AddComputer />}></Route>
 
             </Routes>
         </>

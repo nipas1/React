@@ -1,16 +1,13 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-import { useState,useEffect } from 'react';
-import * as userService from "../services/userService"
-
-const SingleUser = () => {
-    const [user,setUser] = useState([])
-
-    useEffect(() => {
-        userService.getAll().then(result => setUser(result))
-    },[])
-
+const SingleUser = ({
+    _id,
+    firstName,
+    lastName,
+    email,
+    phoneNumber
+}) => {
     return (
         <>
             <Card
@@ -26,7 +23,7 @@ const SingleUser = () => {
                 src="https://cdn-icons-png.flaticon.com/512/21/21104.png"
             />
             <Card.Body>
-                <Card.Title>Full Name</Card.Title>
+                <Card.Title>{firstName}</Card.Title>
                 <Card.Text>
                     Job
                 </Card.Text>

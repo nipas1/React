@@ -12,7 +12,7 @@ const Register = () => {
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Group className="mb-3" controlId="formBasicRePassword">
         <Form.Label>Repeat Password</Form.Label>
         <Form.Control type="rePassword" placeholder="rePassword" />
       </Form.Group>
