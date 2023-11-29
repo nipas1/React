@@ -1,5 +1,9 @@
 const baseUrl = "http://localhost:3030/jsonstore/computers";
 
+const post = async () => {
+    
+}
+
 export const getAll = async () => {
     try {
         const response = await fetch(baseUrl);
