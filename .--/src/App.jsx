@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Routes, Route } from "react-router-dom";
 
 import Catalog from "./components/Catalog";
 import Navigation from "./components/Navigation";
@@ -22,12 +23,11 @@ function App() {
             <Routes>
                 <Route path="/home" element={<Home />}></Route>
                 <Route path="/catalog" element={<Catalog />}></Route>
-                <Route path="/login" element={<Login />}></Route>
-                <Route path="/register" element={<Register />}></Route>
                 <Route path="/singleComputer" element={<SingleComputer />}></Route>
                 <Route path="/singleUser" element={<SingleUser />}></Route>
                 <Route path="/addComputer" element={<AddComputer />}></Route>
-
+                <Route path="/login" element={<Login />}></Route>
+                <Route path="/register" element={<Register />}></Route>
             </Routes>
         </>
     );

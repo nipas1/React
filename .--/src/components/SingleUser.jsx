@@ -23,7 +23,7 @@ const SingleUser = ({
                 src="https://cdn-icons-png.flaticon.com/512/21/21104.png"
             />
             <Card.Body>
-                <Card.Title>{firstName}</Card.Title>
+                <Card.Title>{firstName} {lastName}</Card.Title>
                 <Card.Text>
                     Job
                 </Card.Text>

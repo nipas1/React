@@ -12,3 +12,4 @@ export const getAll = async () => {
         console.log(error);
     }
 };
+

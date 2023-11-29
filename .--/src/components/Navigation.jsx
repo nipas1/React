@@ -16,12 +16,6 @@ const Navigation = () => {
                         <Nav.Link as={Link} to="/catalog">
                             Catalog
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/login">
-                            Login
-                        </Nav.Link>
-                        <Nav.Link as={Link} to="/register">
-                            Register
-                        </Nav.Link>
                         <Nav.Link as={Link} to="/singleComputer">
                             Computer
                         </Nav.Link>
@@ -30,6 +24,12 @@ const Navigation = () => {
                         </Nav.Link>
                         <Nav.Link as={Link} to="/addComputer">
                             Add Computer
+                        </Nav.Link>
+                        <Nav.Link as={Link} to="/login">
+                            Login
+                        </Nav.Link>
+                        <Nav.Link as={Link} to="/register">
+                            Register
                         </Nav.Link>
                     </Nav>
                 </Container>

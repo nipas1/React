@@ -1,19 +1,19 @@
-import SingleUser from "./SingleUser";
-
 import { useState, useEffect } from "react";
-import * as userService from "../services/userService";
+import * as computerService from "../services/computerService";
+import SingleComputer from "./SingleComputer";
 
 const Catalog = () => {
-    const [users, setUser] = useState([]);
+    const [computers, setComputer] = useState([]);
 
     useEffect(() => {
-        userService.getAll().then((result) => setUser(result));
+        computerService.getAll().then((result) => setComputer(result));
     }, []);
-    console.log(users);
+    console.log(computers);
     return (
         <>
-            {users.map((user) => (
-                <SingleUser key={user._id} {...user} />
+        <h1>Catalog Page</h1>
+            {computers.map((computer) => (
+                <SingleComputer key={computer._id} {...computer} />
             ))}
         </>
     );
