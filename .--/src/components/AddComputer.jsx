@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 function AddComputer() {
     return (
         <>
-            <Form>
+            <Form onSubmit={e => e.preventDefault()}>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Computer model</Form.Label>

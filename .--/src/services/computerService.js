@@ -1,19 +1,21 @@
-const baseUrl = "http://localhost:3030/jsonstore/computers";
+import * as request from "../lib/request";
 
-const post = async () => {
-    
-}
+const baseUrl = "http://localhost:3030/data/computers";
 
 export const getAll = async () => {
-    try {
-        const response = await fetch(baseUrl);
-        const result = await response.json();
+    const result = await request.get(baseUrl);
 
-        const data = Object.values(result)
-
-        return data
-    } catch (error) {
-        console.log(error);
-    }
+    return Object.values(result);
 };
 
+export const getOne = async (gameId) => {
+    const result = await request.get(`${baseUrl}/${gameId}`);
+
+    return result;
+};
+
+export const create = async (computerData) => {
+    const result = await request.post(baseUrl, computerData);
+
+    return result;
+};
