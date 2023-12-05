@@ -1,6 +1,6 @@
 import * as request from "../lib/request";
 
-const baseUrl = "http://localhost:3030/data/computers";
+const baseUrl = "http://localhost:3030/jsonstore/computers";
 
 export const getAll = async () => {
     const result = await request.get(baseUrl);
@@ -9,7 +9,7 @@ export const getAll = async () => {
 };
 
 export const getOne = async (gameId) => {
-    const result = await request.get(`${baseUrl}/${gameId}`);
+    const result = await request.get(`${baseUrl}/${gameId}`,);
 
     return result;
 };

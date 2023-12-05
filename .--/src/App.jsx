@@ -7,11 +7,11 @@ import AuthContext from "./contexts/authContext";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Catalog from "./components/Catalog";
+import Catalog from "./components/Catalog/Catalog";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
 import Login from "./components/Login";
-import SingleComputer from "./components/SingleComputer";
+import SingleComputer from "./components/Catalog/SingleComputer";
 import SingleUser from "./components/SingleUser";
 import Register from "./components/Register";
 import AddComputer from "./components/AddComputer";
