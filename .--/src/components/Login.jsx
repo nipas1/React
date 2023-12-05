@@ -19,34 +19,36 @@ const Login = () => {
     });
 
     return (
-        <Form onSubmit={onSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control
-                    type="email"
-                    name={LoginFormKeys.Email}
-                    placeholder="Enter email"
-                    onChange={onChange}
-                    value={values[LoginFormKeys.Email]}
-                />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                    type="password"
-                    name={LoginFormKeys.Password}
-                    placeholder="Password"
-                    onChange={onChange}
-                    values={values[LoginFormKeys.Password]}
-                />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-                Login
-            </Button>
-        </Form>
+        <>
+            <Form onSubmit={onSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <input
+                        type="email"
+                        name={LoginFormKeys.Email}
+                        placeholder="Enter email"
+                        value={values[LoginFormKeys.Email]}
+                        onChange={onChange}
+                    />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <input
+                        type="password"
+                        name={LoginFormKeys.Password}
+                        placeholder="Password"
+                        value={values[LoginFormKeys.Password]}
+                        onChange={onChange}
+                    />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Check me out" />
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                    Login
+                </Button>
+            </Form>
+        </>
     );
 };
 

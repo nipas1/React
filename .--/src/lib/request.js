@@ -4,7 +4,16 @@ const buildOptions = (data) => {
     if (data) {
         options.body = JSON.stringify(data);
         options.headers = {
-            "content-type": "application/json",
+            "Content-Type": "application/json",
+        };
+    }
+
+    const token = localStorage.getItem("accessToken");
+
+    if (token) {
+        options.headers = {
+            ...options.headers,
+            "X-Authorization": token,
         };
     }
 
@@ -13,9 +22,17 @@ const buildOptions = (data) => {
 
 const request = async (method, url, data) => {
     const response = await fetch(url, {
-        ...buildOptions,
+        ...buildOptions(data),
         method,
     });
+
+    if (response.status === 204) {
+        return {};
+    }
+
+    // if (!response.ok) {
+    //     throw result;
+    // }
 
     const result = await response.json();
 
