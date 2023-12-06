@@ -16,6 +16,7 @@ import SingleUser from "./components/SingleUser";
 import Register from "./components/Register";
 import AddComputer from "./components/AddComputer";
 import Logout from "./components/Logout";
+import Details from "./components/Details";
 
 function App() {
     const navigate = useNavigate();
@@ -76,6 +77,7 @@ function App() {
                 <Route path="/login" element={<Login />}></Route>
                 <Route path="/register" element={<Register />}></Route>
                 <Route path="/logout" element={<Logout />}></Route>
+                <Route path="/computers/:computerId" element={<Details />}></Route>
             </Routes>
         </AuthContext.Provider>
     );

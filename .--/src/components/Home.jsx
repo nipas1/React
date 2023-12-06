@@ -18,7 +18,7 @@ const Home = () => {
                     </Card.Body>
                 </Card>
 
-                <Card style={{ width: '18rem' }}>
+                {/* <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src="holder.js/100px180" />
                     <Card.Body>
                         <Placeholder as={Card.Title} animation="glow">
@@ -30,7 +30,7 @@ const Home = () => {
                         </Placeholder>
                         <Placeholder.Button variant="primary" xs={6} />
                     </Card.Body>
-                </Card>
+                </Card> */}
             </div>
         </>
     );
