@@ -20,9 +20,12 @@ const Login = () => {
 
     return (
         <>
+            <h1 style={{fontWeight: "bold",}}>Login</h1>
             <Form onSubmit={onSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label style={{ fontWeight: "bold" }}>
+                        Email
+                    </Form.Label>
                     <input
                         type="email"
                         name={LoginFormKeys.Email}
@@ -32,7 +35,9 @@ const Login = () => {
                     />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
+                    <Form.Label style={{ fontWeight: "bold" }}>
+                        Password
+                    </Form.Label>
                     <input
                         type="password"
                         name={LoginFormKeys.Password}
@@ -40,9 +45,6 @@ const Login = () => {
                         value={values[LoginFormKeys.Password]}
                         onChange={onChange}
                     />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Login

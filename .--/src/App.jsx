@@ -8,7 +8,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Catalog from "./components/Catalog/Catalog";
-import Navigation from "./components/Navigation";
+import Navigation from "./components/NavBar/Navigation";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import SingleComputer from "./components/Catalog/SingleComputer";
