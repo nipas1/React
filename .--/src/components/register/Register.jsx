@@ -2,8 +2,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 import { useContext } from 'react';
-import useForm from '../hooks/useForm';
-import AuthContext from '../contexts/authContext';
+import useForm from '../../hooks/useForm';
+import AuthContext from '../../contexts/authContext';
 
 
 const RegisterFormKeys = {

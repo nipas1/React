@@ -7,16 +7,15 @@ import AuthContext from "./contexts/authContext";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Catalog from "./components/Catalog/Catalog";
+import Catalog from "./components/catalog/Catalog";
 import Navigation from "./components/NavBar/Navigation";
-import Home from "./components/Home";
-import Login from "./components/Login";
+import Home from "./components/home/Home";
+import Login from "./components/login/Login";
 import SingleComputer from "./components/Catalog/SingleComputer";
-import SingleUser from "./components/SingleUser";
-import Register from "./components/Register";
-import AddComputer from "./components/AddComputer";
-import Logout from "./components/Logout";
-import Details from "./components/Details";
+import Register from "./components/register/Register";
+import AddComputer from "./components/createComputer/AddComputer";
+import Logout from "./components/logout/Logout";
+import Details from "./components/details/Details";
 
 function App() {
     const navigate = useNavigate();
@@ -72,7 +71,6 @@ function App() {
                     path="/singleComputer"
                     element={<SingleComputer />}
                 ></Route>
-                <Route path="/singleUser" element={<SingleUser />}></Route>
                 <Route path="/addComputer" element={<AddComputer />}></Route>
                 <Route path="/login" element={<Login />}></Route>
                 <Route path="/register" element={<Register />}></Route>

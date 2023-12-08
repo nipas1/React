@@ -3,14 +3,13 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
-import * as computerService from "../services/computerService";
+import * as computerService from "../../services/computerService";
 import { useNavigate } from "react-router-dom";
 
-function AddComputer() {
+function Edit({ _id, processor, ram, ssd, videoCard, price, type }) {
     const navigate = useNavigate();
     const createComputerHandler = async (e) => {
         e.preventDefault();
-        let pattern = new RegExp(/[a-zA-Z]/g);
 
         const compData = Object.fromEntries(new FormData(e.currentTarget));
         console.log(compData);
@@ -25,13 +24,10 @@ function AddComputer() {
 
     return (
         <>
-            <Form
-                onSubmit={createComputerHandler}
-                style={{ fontWeight: "bold" }}
-            >
+            <Form onSubmit={createComputerHandler}>
                 <Row className="mb-3">
                     <Form.Group as={Col}>
-                        <Form.Label>Image</Form.Label>
+                        <Form.Label>Add Image</Form.Label>
                         <Form.Control
                             id="imageUrl"
                             type="text"
@@ -42,18 +38,13 @@ function AddComputer() {
 
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Computer model</Form.Label>
-                        <Form.Control
-                            type="text"
-                            name="model"
-                            placeholder="Model"
-                        />
+                        <Form.Control name="model" placeholder="Model" />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Type</Form.Label>
                         <Form.Control
-                            type="text"
-                            name="compType"
+                            nmae="compType"
                             placeholder="Gaming,Office"
                         />
                     </Form.Group>
@@ -61,37 +52,37 @@ function AddComputer() {
 
                 <Form.Group className="mb-3" controlId="formGridAddress1">
                     <Form.Label>Processor</Form.Label>
-                    <Form.Control type="text" name="processor" />
+                    <Form.Control name="processor" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formGridAddress2">
                     <Form.Label>Video Card</Form.Label>
-                    <Form.Control type="text" name="videoCard" />
+                    <Form.Control name="videoCard" />
                 </Form.Group>
 
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridCity">
                         <Form.Label>Ram</Form.Label>
-                        <Form.Control type="number" name="ram" />
+                        <Form.Control name="ram" />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridState">
                         <Form.Label>SSD</Form.Label>
-                        <Form.Control type="number" name="ssd" />
+                        <Form.Control name="ssd" />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridZip">
                         <Form.Label>Price</Form.Label>
-                        <Form.Control type="number" name="price" />
+                        <Form.Control name="price" />
                     </Form.Group>
                 </Row>
 
                 <Button variant="primary" type="submit">
-                    Submit
+                    Edit
                 </Button>
             </Form>
         </>
     );
 }
 
-export default AddComputer;
+export default Edit;

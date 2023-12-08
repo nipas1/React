@@ -3,10 +3,10 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
-import * as computerService from "../services/computerService";
+import * as computerService from "../../services/computerService";
 import { useNavigate } from "react-router-dom";
 
-function Edit({ _id, processor, ram, ssd, videoCard, price, type }) {
+function AddComputer() {
     const navigate = useNavigate();
     const createComputerHandler = async (e) => {
         e.preventDefault();
@@ -24,10 +24,13 @@ function Edit({ _id, processor, ram, ssd, videoCard, price, type }) {
 
     return (
         <>
-            <Form onSubmit={createComputerHandler}>
+            <Form
+                onSubmit={createComputerHandler}
+                style={{ fontWeight: "bold" }}
+            >
                 <Row className="mb-3">
                     <Form.Group as={Col}>
-                        <Form.Label>Add Image</Form.Label>
+                        <Form.Label>Image</Form.Label>
                         <Form.Control
                             id="imageUrl"
                             type="text"
@@ -37,14 +40,19 @@ function Edit({ _id, processor, ram, ssd, videoCard, price, type }) {
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridEmail">
-                        <Form.Label>Computer model</Form.Label>
-                        <Form.Control name="model" placeholder="Model" />
+                        <Form.Label>Laptop model</Form.Label>
+                        <Form.Control
+                            type="text"
+                            name="model"
+                            placeholder="Model"
+                        />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridPassword">
                         <Form.Label>Type</Form.Label>
                         <Form.Control
-                            nmae="compType"
+                            type="text"
+                            name="compType"
                             placeholder="Gaming,Office"
                         />
                     </Form.Group>
@@ -52,37 +60,37 @@ function Edit({ _id, processor, ram, ssd, videoCard, price, type }) {
 
                 <Form.Group className="mb-3" controlId="formGridAddress1">
                     <Form.Label>Processor</Form.Label>
-                    <Form.Control name="processor" />
+                    <Form.Control type="text" name="processor" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formGridAddress2">
                     <Form.Label>Video Card</Form.Label>
-                    <Form.Control name="videoCard" />
+                    <Form.Control type="text" name="videoCard" />
                 </Form.Group>
 
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridCity">
                         <Form.Label>Ram</Form.Label>
-                        <Form.Control name="ram" />
+                        <Form.Control type="number" name="ram" />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridState">
                         <Form.Label>SSD</Form.Label>
-                        <Form.Control name="ssd" />
+                        <Form.Control type="number" name="ssd" />
                     </Form.Group>
 
                     <Form.Group as={Col} controlId="formGridZip">
                         <Form.Label>Price</Form.Label>
-                        <Form.Control name="price" />
+                        <Form.Control type="number" name="price" />
                     </Form.Group>
                 </Row>
 
                 <Button variant="primary" type="submit">
-                    Edit
+                    Submit
                 </Button>
             </Form>
         </>
     );
 }
 
-export default Edit;
+export default AddComputer;

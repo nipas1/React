@@ -1,12 +1,7 @@
-import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import Row from "react-bootstrap/Row";
-import "../../detailsPage.css";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
-import * as computerService from "../services/computerService";
+import * as computerService from "../../services/computerService";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -55,7 +50,7 @@ function Details({
                         border: "1px white",
                         height: "5rem",
                         placeItems: "center",
-                        display: "inline-block"
+                        display: "inline-block",
                     }}
                 >
                     <Link
@@ -63,9 +58,9 @@ function Details({
                         className="details-button"
                         style={{
                             borderRadius: "10px",
-                            fontSize:"20px",
-                            padding:"20px",
-                            margin:"5px",
+                            fontSize: "20px",
+                            padding: "20px",
+                            margin: "5px",
                             textAlign: "center",
                             fontWeight: "bold",
                             color: "black",
@@ -78,9 +73,9 @@ function Details({
                         className="details-button"
                         style={{
                             borderRadius: "10px",
-                            fontSize:"20px",
-                            padding:"20px",
-                            margin:"5px",
+                            fontSize: "20px",
+                            padding: "20px",
+                            margin: "5px",
                             textAlign: "center",
                             fontWeight: "bold",
                             color: "black",

@@ -5,9 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { useContext } from "react";
 import AuthContext from "../../contexts/authContext";
 
-// import "./navStyle.css";
 import React from "react";
-import styled from "styled-components";
 
 const Navigation = () => {
     const { isAuthenticated, username } = useContext(AuthContext);
@@ -40,10 +38,7 @@ const Navigation = () => {
                         {isAuthenticated && (
                             <>
                                 <Nav.Link as={Link} to="/addComputer">
-                                    Add Computer
-                                </Nav.Link>
-                                <Nav.Link as={Link} to="/singleUser">
-                                    {username}
+                                    Add Laptop
                                 </Nav.Link>
                                 <Nav.Link as={Link} to="/logout">
                                     Logout

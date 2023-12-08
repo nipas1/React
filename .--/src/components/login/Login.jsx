@@ -1,9 +1,9 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import useForm from "../hooks/useForm";
+import useForm from "../../hooks/useForm";
 import { useContext } from "react";
-import AuthContext from "../contexts/authContext";
+import AuthContext from "../../contexts/authContext";
 
 const LoginFormKeys = {
     Email: "email",
