@@ -10,6 +10,7 @@ export const getAll = async () => {
 
 export const getOne = async (computerId) => {
     const result = await request.get(`${baseUrl}/${computerId}`);
+    console.log(result);
 
     return result;
 };

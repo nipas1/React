@@ -14,6 +14,7 @@ function Details({
     model,
     compType,
     price,
+    userId
 }) {
     const navigate = useNavigate();
     const [computer, setComputer] = useState({});
@@ -23,6 +24,8 @@ function Details({
         computerService.getOne(computerId).then(setComputer);
     }, [computerId]);
 
+//     const isOwner = userId === computer.ownerId
+// console.log(computer.ownerId);
     return (
         <>
             <div>
@@ -54,7 +57,7 @@ function Details({
                     }}
                 >
                     <Link
-                        to={`/computers/${computer._id}`}
+                        to={`/computers/${computer._id}/edit`}
                         className="details-button"
                         style={{
                             borderRadius: "10px",
@@ -69,7 +72,7 @@ function Details({
                         Edit
                     </Link>
                     <Link
-                        to={`/computers/${computer._id}`}
+                        to={`/computers/${computer._id}/delete`}
                         className="details-button"
                         style={{
                             borderRadius: "10px",

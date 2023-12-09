@@ -11,7 +11,6 @@ const Catalog = () => {
         // computerService.getOne();
         computerService.getAll().then((result) => setComputer(result));
     }, []);
-    // console.log(computers);
     return (
         <>
             <h1>Catalog Page</h1>

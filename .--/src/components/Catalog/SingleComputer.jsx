@@ -6,7 +6,7 @@ import * as computerService from "../../services/userService";
 import { Link } from "react-router-dom";
 import Col from "react-bootstrap/esm/Col";
 
-const SingleComputer = ({ _id, imageUrl, model, compType, price }) => {
+const SingleComputer = ({ _id, imageUrl, model, compType, price, }) => {
     const [computer, setComputer] = useState([]);
 
     useEffect(() => {
