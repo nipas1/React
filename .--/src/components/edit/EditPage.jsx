@@ -24,10 +24,11 @@ function Edit({ _id, processor, ram, ssd, videoCard, price, type }) {
 
     return (
         <>
+        <h1 style={{fontWeight: "bold",}}>Edit Page</h1>
             <Form onSubmit={createComputerHandler}>
                 <Row className="mb-3">
                     <Form.Group as={Col}>
-                        <Form.Label>Add Image</Form.Label>
+                        <Form.Label>Edit Image</Form.Label>
                         <Form.Control
                             id="imageUrl"
                             type="text"

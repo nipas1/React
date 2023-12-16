@@ -14,7 +14,7 @@ function Details({
     model,
     compType,
     price,
-    userId
+    userId,
 }) {
     const navigate = useNavigate();
     const [computer, setComputer] = useState({});
@@ -24,49 +24,64 @@ function Details({
         computerService.getOne(computerId).then(setComputer);
     }, [computerId]);
 
-//     const isOwner = userId === computer.ownerId
-// console.log(computer.ownerId);
+    //     const isOwner = userId === computer.ownerId
+    // console.log(computer.ownerId);
     return (
         <>
-            <div>
+            <div
+                style={{
+                    margin: "100px",
+                    border: "flex",
+                    textAlign: "center",
+                }}
+            >
                 <Card.Img
                     variant="top"
-                    style={{
-                        border: "flex",
-                        textAlign: "center",
-                        height: "250px",
-                        width: "350px",
-                    }}
                     src={computer.imageUrl}
+                    style={{
+                        border: "center",
+                        textAlign: "center",
+                        height: "200px",
+                        width: "300px",
+                    }}
                 />
                 <Card.Body>
-                    <Card.Title>{computer.model}</Card.Title>
-                    <Card.Text>Type: {computer.compType}</Card.Text>
-                    <Card.Text>Processor: {computer.processor}</Card.Text>
-                    <Card.Text>VideoCard: {computer.videoCard}</Card.Text>
-                    <Card.Text>RAM: {computer.ram}</Card.Text>
-                    <Card.Text>SSD: {computer.ssd}</Card.Text>
-                    <Card.Text>Price: {computer.price}</Card.Text>
+                    <Card.Title style={{ fontWeight: "bold" }}>
+                        {computer.model}
+                    </Card.Title>
+                    <Card.Text style={{ fontWeight: "bold" }}>
+                        Type: {computer.compType}
+                    </Card.Text>
+                    <Card.Text style={{ fontWeight: "bold" }}>
+                        Processor: {computer.processor}
+                    </Card.Text>
+                    <Card.Text style={{ fontWeight: "bold" }}>
+                        VideoCard: {computer.videoCard}
+                    </Card.Text>
+                    <Card.Text style={{ fontWeight: "bold" }}>
+                        RAM: {computer.ram}
+                    </Card.Text>
+                    <Card.Text style={{ fontWeight: "bold" }}>
+                        SSD: {computer.ssd}
+                    </Card.Text>
+                    <Card.Text style={{ fontWeight: "bold" }}>
+                        Price: {computer.price}$
+                    </Card.Text>
                 </Card.Body>
-                <div
-                    style={{
-                        border: "1px white",
-                        height: "5rem",
-                        placeItems: "center",
-                        display: "inline-block",
-                    }}
-                >
+                <div style={{ margin: "20px" }}>
                     <Link
                         to={`/computers/${computer._id}/edit`}
                         className="details-button"
                         style={{
+                            border: "10px",
                             borderRadius: "10px",
                             fontSize: "20px",
-                            padding: "20px",
-                            margin: "5px",
+                            padding: "10px",
+                            margin: "20px",
                             textAlign: "center",
                             fontWeight: "bold",
-                            color: "black",
+                            backgroundColor: "black",
+                            color: "white",
                         }}
                     >
                         Edit
@@ -75,13 +90,15 @@ function Details({
                         to={`/computers/${computer._id}/delete`}
                         className="details-button"
                         style={{
+                            border: "10px",
                             borderRadius: "10px",
                             fontSize: "20px",
-                            padding: "20px",
-                            margin: "5px",
+                            padding: "10px",
+                            margin: "20px",
                             textAlign: "center",
                             fontWeight: "bold",
-                            color: "black",
+                            backgroundColor: "black",
+                            color: "white",
                         }}
                     >
                         Delete

@@ -85,7 +85,17 @@ function AddComputer() {
                     </Form.Group>
                 </Row>
 
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit"style={{
+                            border: "10px",
+                            borderRadius: "10px",
+                            fontSize: "20px",
+                            padding: "10px",
+                            margin: "20px",
+                            textAlign: "center",
+                            fontWeight: "bold",
+                            backgroundColor: "black",
+                            color: "white",
+                        }}>
                     Submit
                 </Button>
             </Form>
